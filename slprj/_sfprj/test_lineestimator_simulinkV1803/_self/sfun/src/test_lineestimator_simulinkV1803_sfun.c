@@ -105,10 +105,10 @@ unsigned int sf_test_lineestimator_simulinkV1803_process_check_sum_call( int
       return 0;
     }
   } else {
-    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(188430351U);
-    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3985134558U);
-    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1848675660U);
-    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3141014511U);
+    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3501219166U);
+    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2894392857U);
+    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(451745784U);
+    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2821179432U);
   }
 
   return 1;
@@ -146,7 +146,7 @@ unsigned int sf_test_lineestimator_simulinkV1803_autoinheritance_info( int nlhs,
     switch (chartFileNumber) {
      case 3:
       {
-        if (strcmp(aiChksum, "yApn5abLQU7rsD4yHZJ8gF") == 0) {
+        if (strcmp(aiChksum, "05NYgidsmfsd4Cl740LS2D") == 0) {
           extern mxArray
             *sf_c3_test_lineestimator_simulinkV1803_get_autoinheritance_info
             (void);
@@ -244,7 +244,7 @@ unsigned int sf_test_lineestimator_simulinkV1803_third_party_uses_info( int nlhs
     switch (chartFileNumber) {
      case 3:
       {
-        if (strcmp(tpChksum, "Cx8BiExhzbEYsJ9zZ1MXrE") == 0) {
+        if (strcmp(tpChksum, "0YvKJ64MekCQFpuFzMdPgC") == 0) {
           extern mxArray
             *sf_c3_test_lineestimator_simulinkV1803_third_party_uses_info(void);
           plhs[0] = sf_c3_test_lineestimator_simulinkV1803_third_party_uses_info
@@ -283,7 +283,7 @@ unsigned int sf_test_lineestimator_simulinkV1803_jit_fallback_info( int nlhs,
     switch (chartFileNumber) {
      case 3:
       {
-        if (strcmp(tpChksum, "Cx8BiExhzbEYsJ9zZ1MXrE") == 0) {
+        if (strcmp(tpChksum, "0YvKJ64MekCQFpuFzMdPgC") == 0) {
           extern mxArray
             *sf_c3_test_lineestimator_simulinkV1803_jit_fallback_info(void);
           plhs[0] = sf_c3_test_lineestimator_simulinkV1803_jit_fallback_info();
@@ -321,7 +321,7 @@ unsigned int sf_test_lineestimator_simulinkV1803_updateBuildInfo_args_info( int
     switch (chartFileNumber) {
      case 3:
       {
-        if (strcmp(tpChksum, "Cx8BiExhzbEYsJ9zZ1MXrE") == 0) {
+        if (strcmp(tpChksum, "0YvKJ64MekCQFpuFzMdPgC") == 0) {
           extern mxArray
             *sf_c3_test_lineestimator_simulinkV1803_updateBuildInfo_args_info
             (void);
@@ -349,7 +349,7 @@ void sf_test_lineestimator_simulinkV1803_get_post_codegen_info( int nlhs,
   switch (chartFileNumber) {
    case 3:
     {
-      if (strcmp(tpChksum, "Cx8BiExhzbEYsJ9zZ1MXrE") == 0) {
+      if (strcmp(tpChksum, "0YvKJ64MekCQFpuFzMdPgC") == 0) {
         extern mxArray
           *sf_c3_test_lineestimator_simulinkV1803_get_post_codegen_info(void);
         plhs[0] = sf_c3_test_lineestimator_simulinkV1803_get_post_codegen_info();

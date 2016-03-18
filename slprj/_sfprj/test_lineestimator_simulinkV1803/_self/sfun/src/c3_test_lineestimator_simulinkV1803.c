@@ -534,7 +534,7 @@ static void c3_chartstep_c3_test_lineestimator_simulinkV1803
   _SFD_EML_CALL(0U, chartInstance->c3_sfEvent, 39);
   c3_X1 = c3_b_X_in;
   _SFD_EML_CALL(0U, chartInstance->c3_sfEvent, 40);
-  c3_Y1 = -c3_b_Y_in;
+  c3_Y1 = c3_b_Y_in;
   _SFD_EML_CALL(0U, chartInstance->c3_sfEvent, 42);
   c3_h_A = c3_b_Field_length;
   c3_gb_x = c3_h_A;
@@ -550,7 +550,7 @@ static void c3_chartstep_c3_test_lineestimator_simulinkV1803
   c3_mb_x = c3_lb_x;
   c3_nb_x = c3_mb_x;
   c3_i_y = c3_nb_x / 2.0;
-  c3_ob_x = c3_Y1 + c3_i_y;
+  c3_ob_x = -c3_Y1 + c3_i_y;
   c3_pb_x = c3_ob_x;
   c3_rho21 = muDoubleScalarAbs(c3_pb_x);
   _SFD_EML_CALL(0U, chartInstance->c3_sfEvent, 44);
@@ -2061,10 +2061,10 @@ extern void utFree(void*);
 
 void sf_c3_test_lineestimator_simulinkV1803_get_check_sum(mxArray *plhs[])
 {
-  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2202956913U);
-  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2535956310U);
-  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3115675457U);
-  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3477559596U);
+  ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2883259054U);
+  ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2003172873U);
+  ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(4150456356U);
+  ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(2640294252U);
 }
 
 mxArray* sf_c3_test_lineestimator_simulinkV1803_get_post_codegen_info(void);
@@ -2078,7 +2078,7 @@ mxArray *sf_c3_test_lineestimator_simulinkV1803_get_autoinheritance_info(void)
     autoinheritanceFields);
 
   {
-    mxArray *mxChecksum = mxCreateString("yApn5abLQU7rsD4yHZJ8gF");
+    mxArray *mxChecksum = mxCreateString("05NYgidsmfsd4Cl740LS2D");
     mxSetField(mxAutoinheritanceInfo,0,"checksum",mxChecksum);
   }
 
@@ -2455,7 +2455,7 @@ static void chart_debug_initialization(SimStruct *S, unsigned int
 
 static const char* sf_get_instance_specialization(void)
 {
-  return "Cx8BiExhzbEYsJ9zZ1MXrE";
+  return "0YvKJ64MekCQFpuFzMdPgC";
 }
 
 static void sf_opaque_initialize_c3_test_lineestimator_simulinkV1803(void
@@ -2610,10 +2610,10 @@ static void mdlSetWorkWidths_c3_test_lineestimator_simulinkV1803(SimStruct *S)
   }
 
   ssSetOptions(S,ssGetOptions(S)|SS_OPTION_WORKS_WITH_CODE_REUSE);
-  ssSetChecksum0(S,(3801712672U));
-  ssSetChecksum1(S,(2687557104U));
-  ssSetChecksum2(S,(2391517241U));
-  ssSetChecksum3(S,(2127455535U));
+  ssSetChecksum0(S,(847914468U));
+  ssSetChecksum1(S,(3310091649U));
+  ssSetChecksum2(S,(3313957837U));
+  ssSetChecksum3(S,(1216820949U));
   ssSetmdlDerivatives(S, NULL);
   ssSetExplicitFCSSCtrl(S,1);
   ssSupportsMultipleExecInstances(S,1);
