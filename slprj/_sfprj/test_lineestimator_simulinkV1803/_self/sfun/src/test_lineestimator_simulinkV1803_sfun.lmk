@@ -1,0 +1,39 @@
+CC     = "E:\Program Files\MATLAB\R2014b\sys\lcc64\lcc64\bin\lcc64.exe"
+LD     = "E:\Program Files\MATLAB\R2014b\sys\lcc64\lcc64\bin\lcclnk64.exe"
+LIBCMD = "E:\Program Files\MATLAB\R2014b\sys\lcc64\lcc64\bin\lcclib64.exe"
+CFLAGS = -dll -noregistrylookup  -c -Zp8 -DLCC_WIN64 -DMATLAB_MEX_FILE -DMX_COMPAT_32 -nodeclspec 
+LDFLAGS = -s -dll -L"E:\Program Files\MATLAB\R2014b\sys\lcc64\lcc64\lib64" -entry LibMain -map sfun.map 
+LIBFLAGS = 
+
+OBJECTS = \
+	"test_lineestimator_simulinkV1803_sfun.obj"\
+	"c3_test_lineestimator_simulinkV1803.obj"\
+	"test_lineestimator_simulinkV1803_sfun_registry.obj"\
+	"lccstub.obj"\
+	"test_lineestimator_simulinkV1803_sfun.def"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\sf_runtime.lib"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\libmwblas.lib"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\libmx.lib"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\libmex.lib"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\libmat.lib"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\libfixedpoint.lib"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\libut.lib"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\libmwmathutil.lib"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\libemlrt.lib"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\libmwsl_log_load_blocks.lib"\
+	"E:\Program Files\MATLAB\R2014b\extern\lib\win64\microsoft\libmwsimulink.lib"\
+	"E:\Program Files\MATLAB\R2014b\lib\win64\libmwipp.lib"\
+
+INCLUDE_PATH= -I"E:\Program Files\MATLAB\R2014b\sys\lcc64\lcc64\include64"  -I"E:\Program Files\MATLAB\R2014b\extern\include"  -I"E:\Program Files\MATLAB\R2014b\simulink\include"  -I"E:\Program Files\MATLAB\R2014b\stateflow\c\mex\include"  -I"E:\Program Files\MATLAB\R2014b\rtw\c\src"  -I"D:\MSD2015\slprj\_sfprj\test_lineestimator_simulinkV1803\_self\sfun\src" 
+ 
+
+test_lineestimator_simulinkV1803_sfun.mexw64 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o test_lineestimator_simulinkV1803_sfun.mexw64 @test_lineestimator_simulinkV1803_sfun.lmko
+test_lineestimator_simulinkV1803_sfun.obj :	"test_lineestimator_simulinkV1803_sfun.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "test_lineestimator_simulinkV1803_sfun.c"
+c3_test_lineestimator_simulinkV1803.obj :	"c3_test_lineestimator_simulinkV1803.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "c3_test_lineestimator_simulinkV1803.c"
+test_lineestimator_simulinkV1803_sfun_registry.obj :	"test_lineestimator_simulinkV1803_sfun_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "test_lineestimator_simulinkV1803_sfun_registry.c"
+lccstub.obj :	"E:\Program Files\MATLAB\R2014b\sys\lcc64\lcc64\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "E:\Program Files\MATLAB\R2014b\sys\lcc64\lcc64\mex\lccstub.c"
